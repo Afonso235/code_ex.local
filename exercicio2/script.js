@@ -9,3 +9,5 @@ accordionItems.forEach(item => {
     item.classList.toggle('open');
   });
 });
+
+

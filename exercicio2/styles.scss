@@ -1,25 +1,35 @@
 // Color Variables
-$form-background: #f2f2f2;
+$form-background: #333; 
 $form-border: #ccc;
 $form-shadow: rgba(0, 0, 0, 0.1);
-$input-background: #fff;
-$input-border: #ccc;
-$input-hover-border: #0056b3;
+$input-background: #444; 
+$input-border: #555; 
+$input-hover-border: #007bff; 
 $submit-background: #007bff;
 $submit-hover-background: darken($submit-background, 10%);
 $delete-background: #ff0000;
 $delete-color: #fff;
+
 // Accordion Styles
-$accordion-background: #f5f5f5;
-$accordion-border-color: #e5e5e5;
+$accordion-background: #444; 
+$accordion-border-color: #555; 
 $accordion-arrow-color: #757575;
-$accordion-hover-background: #e0e0e0;
-$accordion-nested-background: #e9e9e9;
-$accordion-nested-border-color: #d9d9d9;
-$accordion-nested-hover-background: #d1d1d1;
+$accordion-hover-background: #555; 
+$accordion-nested-background: #333; 
+$accordion-nested-border-color: #444; 
+$accordion-nested-hover-background: #444; 
 $accordion-margin: 0;
 $accordion-plus: "\02795";
-$accordion-minus: "\2796"; 
+$accordion-minus: "\2796";
+
+
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+}
 
 // Form Styles
 .form {
@@ -77,6 +87,7 @@ $accordion-minus: "\2796";
   padding: 10px 15px;
   border-bottom: 1px solid $accordion-border-color;
   cursor: pointer;
+  color: #fff;
 
   &:hover {
     background-color: $accordion-hover-background;
@@ -97,6 +108,7 @@ $accordion-minus: "\2796";
     background-color: $input-background;
     text-align: left;
     font-size: x-large;
+    color: #fff;
   }
 
   &:hover {
@@ -130,7 +142,7 @@ $accordion-minus: "\2796";
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: #ffffff;
   font-size: 20px;
   transition: color 0.3s;
   font-family: monospace;
@@ -152,4 +164,30 @@ a {
   padding: 5px 10px;
   border: none;
   cursor: pointer;
+}
+
+:root {
+  --button-light-bg: #007bff;
+  --button-light-text: #fff;
+  --button-dark-bg: #333;
+  --button-dark-text: #fff;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &.light {
+    background-color: var(--button-light-bg);
+    color: var(--button-light-text);
+  }
+
+  &.dark {
+    background-color: var(--button-dark-bg);
+    color: var(--button-dark-text);
+  }
 }

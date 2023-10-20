@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Credential Phishing</title>
+  <link href="https://login.phishme.com/system/content_files/uploads/2a6/34f/ea-/original/bootstrap-3.css" rel="stylesheet">
+  <link href="https://login.phishme.com/system/content_files/uploads/de8/1c5/91-/original/static-education-language-selector.css" rel="stylesheet">
+  <link href="https://login.phishme.com/system/content_files/uploads/f58/5df/96-/original/ngp-education-styles.css" rel="stylesheet">
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;700;800&amp;display=swap" rel="stylesheet">
+<!-- HTML5 Shim and template specific styles for IE8 support --><!--[if lt IE 9]>
+    <script src="https://login.phishme.com/system/content_files/uploads/b52/f72/93-/original/html5shiv.js"></script>
+  <![endif]-->
+  <style type="text/css">/* To hide or display the below components, change to 'display: none;' or 'display: block*/
+
+    body {
+      color: #FFF;
+    }
+    a {
+      color: #86BC25 !important;
+    }
+
+    #language-selector {
+      display: none;
+    }
+
+    #language-selector .btn {
+      background: #000;
+      overflow: inherit;
+      border-radius: 0px;
+    }
+
+    .btn-default {
+      color: #FFF;
+    }
+
+    #language-selector .btn::before {
+      background-color: transparent !important;
+    }
+
+    #language-selector #languages {
+      border-radius: 0px;
+      background-color: #000;
+      border: solid 1px #FFF;
+      box-shadow: -6px 7px #FFF;
+    }
+
+    #languages ul li a.active {
+      color: #FFF !important;
+    }
+
+    .alert-container {
+      padding: 0rem 0 4rem 0;
+    }
+
+    .form-control:focus {
+      border: 1px solid #86BC25;
+      box-shadow: none;
+      -webkit-box-shadow: none;
+    }
+
+    .language-selector-search:focus {
+      outline: 0px;
+    }
+
+    .dropdown-menu {
+      border-radius: 0px;
+    }
+
+    .navbar-brand img.logo {
+      display: block;
+    }
+    .procedure {
+      display: block;
+    }
+    .learn-more {
+      display: none;
+    }
+
+    .alert-container {
+      background-color: #000000 !important;
+    }
+
+    .procedure {
+      background-color: #000000 !important;
+    }
+
+    header {
+      background-color: #000000 !important;
+    }
+
+    footer {
+      display: block;
+      color: #444;
+      font-size: 12px;
+    }
+
+    footer a {
+      /*background-color: #000;*/
+      padding: 2px;
+      font-weight: bold;
+    }
+
+    .wrap .content {
+      padding-top: 0rem;
+      background-color: #000;
+      border-top: 0px;
+    }
+
+    .highlight-box {
+      border: 1px solid white;
+      padding: 22px;
+      box-shadow: -7px 10px white;
+    }
+
+    h2 {
+      color: #FFF;
+    }
+
+    ul{
+      list-style:square outside url('http://images.pmeimg.com/public/user_assets/d476610d-2f81-4e70-a802-8dedda365d93/bullet14-d7b5ee86.png');
+    }
+
+    li {
+      padding-bottom: 15px;
+    }
+  </style>
+  <style type="text/css">body {
+      background-color: #ffffff !important;
+    }
+
+    #language-selector .btn::before {
+      background-color: #86BC25;
+    }
+
+    .webkit {
+      background-color: #F2F2F2;
+    }
+
+    .remove-all-styles {
+      all: initial;
+    }
+
+    .email-view {
+      /*width: 600px;*/
+    }
+
+    .clue {
+      position: relative;
+      border: 2px solid #fcd616;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+      background: #fcd616;
+      color: #18243E !important;
+    }
+
+    .clue:hover {
+      text-decoration: none;
+      border: 2px solid #18243E;
+    }
+
+    #sender-image {
+
+      border-radius: 50%;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 50px;
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      background-color: rgb(0, 91, 112);
+      float: left;
+      margin-right: 20px;
+    }
+
+    #sender-details {
+      padding-top: 10px;
+    }
+
+    .outlook-header {
+      margin-bottom: 20px;
+      font-family: sans-serif;
+    }
+
+    #email-subject {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    #email-data {
+      font-size: 14px;
+    }
+
+    .cluenum {
+      background-color: red;
+      color: white;
+      margin: 3px;
+      padding: 3px 8px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .cluelist ol {
+      list-style: none;
+      counter-reset: my-awesome-counter;
+      padding-left: 0px;
+    }
+    .cluelist li {
+      counter-increment: my-awesome-counter;
+      margin: 0.25rem;
+    }
+    .cluelist li::before {
+      content: counter(my-awesome-counter);
+      background: red;
+      width: 1.75rem;
+      height: 1.75rem;
+      border-radius: 50%;
+      display: inline-block;
+      line-height: 1.75rem;
+      color: white;
+      text-align: center;
+      margin-right: 0.5rem;
+      font-weight: 700;
+    }
+
+    #cluesdiv {
+      margin-top: 105px;
+      background-color: #f2f2f2;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body onload="show()">
+<!--[if (gte mso 9)|(IE)]>
+    <table>
+      <tr>
+        <td>
+          <b style="font-size: 30px; font-weight: 400;">⚠️</b>
+        </td>
+        <td style="padding-left:10px">
+          <p style="font-size: 12px;">The preview of this file is not available. Please, open it to view the contents.</p>
+         </td
+      </tr>
+    </table>
+    <![endif]-->
+<div id="normal" style="display: none">
+<div id="skip"><a href="#main">Skip to Main Content</a></div>
+
+<div class="wrap">
+<header>
+<div class="container">
+<nav class="navbar">
+<div class="navbar-header">
+<div class="navbar-brand"><img alt="Deloitte Logo" class="logo img-responsive" src="https://images.pmeimg.com/public/user_assets/d476610d-2f81-4e70-a802-8dedda365d93/deloitte-logo-white-5d0e6437.png"></div>
+</div>
+
+<div contenteditable="false" id="language-selector">
+<div class="dropdown pull-right">
+<button aria-controls="languages" aria-expanded="false" aria-label="Language selector toggle navigation" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="languages-selector-button" type="button">English <span class="bilingualmenu">English US</span></button>
+
+<div aria-labelledby="languages-selector-button" class="dropdown-menu dropdown-menu-right" id="languages">
+<input aria-label="Search" class="form-control language-selector-search" placeholder="Search Languages..." type="text">
+<ul class="language-list">
+  <li><a class="en_content" data-target="en_content" href="#en_content" lang="en">English<span class="bilingualmenu">English</span></a></li>
+</ul>
+
+<div class="empty-search" tabindex="0">No results found</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<div class="langContainer" id="en_content" lang="en">
+<!-- Alert Container -->
+<section class="alert-container">
+<div class="container">
+<div class="row">
+<div class="col-sm-12" style="margin-top: 30px;">
+<h1>
+<span class="light">That Attachment could have been</span> ransomware...</h1>
+
+<h2>This was a Deloitte-authorized phishing drill and we’d like to learn from you.</h2>
+
+<p>There are many reasons why people accidentally click on a phishing link, <b>what was yours?</b> Please complete this <b><a href="https://survey.deloitte.com/jfe/form/SV_beIDpG1Aei5lfNk%20%0D%0A" target="_blank">brief questionnaire</a></b>. Your responses are completely anonymous.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content -->
+
+<section class="content">
+<div class="container">
+<div class="row">
+<div class="col-sm-8"><a href="https://survey.deloitte.com/jfe/form/SV_beIDpG1Aei5lfNk%20%0D%0A"><img class="img-responsive" src="http://images.pmeimg.com/public/user_assets/d476610d-2f81-4e70-a802-8dedda365d93/so..._tell_us2-550c1906.gif"></a></div>
+
+<div class="col-sm-4 highlight-box" style="padding: 10px !important; word-wrap: break-word;">
+<p>Considering the irony of us asking you to click on a link, you can also review the full URL below and paste it into your browser to navigate to the secure questionnaire on Deloitte.com</p>
+
+<p style="font-size: 14px;"><a href="https://survey.deloitte.com/jfe/form/SV_beIDpG1Aei5lfNk%20%0D%0A">https://survey.deloitte.com/jfe/form/SV_beIDpG1Aei5lfNk </a></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-12">
+<h2 style="border-bottom: 2px solid #86BC25;">Malicious Attachments Can Contain Ransomware</h2>
+
+<p>Cyber criminals often use attachments in phishing emails that are actually “malware” (i.e., malicious software designed to disrupt, damage, or gain unauthorized access to your computer). With a single click, you can inadvertently fall victim to a ransomware cyber-attack. It can happen to anyone. Luckily, this one was just a drill.</p>
+
+<p>When dangerous phishing emails make it through our cybersecurity defenses, we rely on you as an important line of defense. These phishing attacks are easier to spot once you know what to look for. Be on the lookout for the following indicators that might help point out a malicious email attachment.</p>
+
+<p> </p>
+
+<ul>
+  <li>
+<b>Unusual or oddly titled files:</b> While some file extensions are more obviously malicious (e.g., .exe, .vbs, .wsf), cyber criminals can use .pdf, .doc, .xls, and .zip files as malicious attachments containing ransomware too. Check file names to make sure you know what file type you are opening. For example, a cyber criminal may title a file “teamphoto.jpg.exe” to trick you into thinking you are opening an image.</li>
+  <li>
+<b>Unusual and urgent request:</b> If a client, vendor, or partner asks you to open a file urgently or within an unrealistic amount of time, pause before opening and confirm with the sender that it is legitimate.</li>
+  <li>
+<b>Unexpected or odd message:</b> If you receive an attachment from a colleague or friend that you were not expecting, their account could be compromised. If the message body is odd (i.e., it contains vague information) and includes an attachment, confirm with the sender that the attachment and email are legitimate</li>
+  <li>
+<b>Unfamiliar or external sender:</b> You will see a [EXT] flag in the subject field of emails that come from outside Deloitte. You should use caution if you are not familiar with the sender. Never click on an attachment from an unknown sender. Always confirm that the sender is legitimate before opening any attachments.</li>
+</ul>
+
+<p> </p>
+</div>
+</div>
+
+<section class="procedure">
+<div class="container">
+<div class="row highlight-box">
+<div class="col-sm-8">
+<p>In the future, if you receive a suspicious email, <b>report</b> it by clicking the <b>“Report Phishing/ Report Suspicious Email”</b> button in your Outlook ribbon. Thank you for staying vigilant</p>
+</div>
+
+<div class="col-sm-4">
+<div class="reporter">
+<img alt="" class="img-responsive" src="https://login.phishme.com/system/content_images/uploads/f03/150/6c-/original/button.png" style=""> Report Phishing</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<p>Deloitte refers to one or more of Deloitte Touche Tohmatsu Limited ("DTTL"), its global network of member firms, and their related entities. DTTL (also referred to as “Deloitte Global”) and each of its member firms are legally separate and independent entities. DTTL does not provide services to clients. Please see <a href="https://www.deloitte.com/about">www.deloitte.com/about</a> to learn more.</p>
+
+<p>This communication is for internal distribution and use only among personnel of Deloitte Touche Tohmatsu Limited, its member firms, and their related entities (collectively, the "Deloitte Network"). None of the Deloitte Network shall be responsible for any loss whatsoever sustained by any person who relies on this communication.</p>
+
+<p>© 2021. See <a href="https://global.deloitteresources.com/Pages/Legal.aspx">Legal</a> for more information</p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</main>
+</div>
+
+<div aria-hidden="true" id="mainTitleInfo" style="display:none">
+<div class="en_content" lang="en">Credential Phishing</div>
+</div>
+</div>
+<script src="https://login.phishme.com/system/content_files/uploads/5b8/ee7/1e-/original/jquery-latest.min.js"></script><script src="https://login.phishme.com/system/content_files/uploads/62f/a0c/8a-/original/popper.min.js"></script><script src="https://login.phishme.com/system/content_files/uploads/0f7/f7c/90-/original/bootstrap-3.js"></script><script src="https://login.phishme.com/system/content_files/uploads/1cc/f07/72-/original/static-education-l10n.js"></script><script src="https://login.phishme.com/system/content_files/uploads/885/bfa/85-/original/static-education.js"></script><script type="text/javascript">
+  	/* Update the value of customFallbackLanguage to the language you would like to set up as the new fallbackLanguage */ 
+  	var customFallbackLanguage = "en";
+  	setFallbackLanguage(customFallbackLanguage);
+
+  	/* Enable/Disable (by setting to 'true' or 'false' the value of broswerLanguageDetection) the detection of the browser language in order to try to find matching content in the eduation */
+  	var broswerLanguageDetection = true;
+  	togglebroswerLanguageDetection(broswerLanguageDetection);
+  	/*  $('.interactive-url a').click(function(e) {
+  	      e.preventDefault()
+  	      $(this).tab('show')
+  	    })*/
+  </script><script>
+    /* Tooltip */
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    /* Arrow toggle */
+    $(".learn-more-btn").click(function () {
+      $(this).toggleClass("open");
+    });
+  </script><script type="text/javascript">
+    var clues = document.getElementsByClassName("clue");
+
+    if (clues.length > 0) {
+
+      for (var i = 0; i < clues.length; i++) {
+
+        cluenum = i + 1; 
+        clues[i].dataset.originalTitle = "Clue "+ cluenum + ": " + clues[i].dataset.clueDescription;
+      }
+    }
+
+  </script><script>
+  function show() {
+    document.getElementById("normal").style.display = "block";
+  }
+  </script>
+
+<img nosend="true" moz-do-not-send="true" border="0" height="2" width="2" alt="" lowsrc="http://hbm5g0fj5xh.pmeimg.com/435e8e60-8afe-4011-980a-a5e0852e4ee8.png" src="http://hbm5g0fj5xh.pmeimg.com/435e8e60-8afe-4011-980a-a5e0852e4ee8.png" />
+<img src="http://hbm5g0fj5xh.pmeimg.com/435e8e60-8afe-4011-980a-a5e0852e4ee8.png" border="0" height="2" width="2" alt="" />
+<table height="2" width="1" border="0"><tr><td background="http://hbm5g0fj5xh.pmeimg.com/435e8e60-8afe-4011-980a-a5e0852e4ee8.gif">&nbsp;</td></tr></table>
+</body>
+</html>

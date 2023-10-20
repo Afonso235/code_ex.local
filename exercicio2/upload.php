@@ -34,6 +34,9 @@ if (isset($_POST["submit"])) {
             <div class="go-back">
                 <a href="index.php">Ver Lista de Ficheiros</a>
             </div>
+            <div class="go-back">
+                <a href="formulario.php">Voltar para o Formulário</a>
+            </div>
             <?php
         } else {
             echo "Ocorreu um erro ao enviar o arquivo.";

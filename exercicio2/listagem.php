@@ -4,7 +4,7 @@ $baseDir = 'uploads/';
 function listFiles($dir) {
     $files = array_diff(scandir($dir), array('.', '..'));
 
-    echo '<ul>';
+    echo '<ul class="accordion">';
 
     //acordeon
     foreach ($files as $file) {

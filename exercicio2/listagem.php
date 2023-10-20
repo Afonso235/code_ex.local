@@ -6,6 +6,7 @@ function listFiles($dir) {
 
     echo '<ul>';
 
+    //acordeon
     foreach ($files as $file) {
         $filePath = $dir . '/' . $file;
 
@@ -18,10 +19,12 @@ function listFiles($dir) {
             $fileSize = filesize($filePath);
             $fileSizeFormatted = formatSize($fileSize);
 
+            //donwload
             echo '<li><a href="download.php?file=' . $filePath . '">' . $fileInfo['filename'] . '.' . $fileInfo['extension'] . '</a>';
             echo ' (' . $fileSizeFormatted . ')';
             echo ' - ' . date('Y-m-d H:i:s', filemtime($filePath)) . '</li>';
 
+            // excluir
             echo '<form method="post" action="delete.php">';
             echo '<input type="hidden" name="file" value="' . $filePath . '">';
             echo '<input type="submit" class="delete-button" value="Excluir">';
@@ -38,11 +41,8 @@ function formatSize($size) {
     for ($i = 0; $size >= 1024 && $i < 4; $i++) {
         $size /= 1024;
     }
-
     return round($size, 2) . ' ' . $units[$i];
 }
-
-$baseDir = 'uploads/';
 
 if (isset($_GET['dir'])) {
     $currentDir = $baseDir . $_GET['dir'];

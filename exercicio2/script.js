@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     folders.forEach(function (folder) {
         folder.addEventListener("click", function (event) {
             event.preventDefault();
+            console.log('ola');
             let parent = folder.parentElement;
             let sublist = parent.querySelector("ul");
             

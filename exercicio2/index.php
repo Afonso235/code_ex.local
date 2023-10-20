@@ -1,9 +1,4 @@
-<?php
-include "listagem.php";
-
-
-?>
-
+<?php include "listagem.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

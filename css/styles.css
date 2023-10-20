@@ -20,7 +20,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #476944; }
+    background-color: #8aaf87; }
   .card .front {
     background-size: cover;
     background-repeat: no-repeat;
@@ -59,4 +59,4 @@
 .list-cod {
   margin: 20px; }
   .list-cod .gera-code {
-    margin-left: 40px; }
+    margin-left: 30px; }

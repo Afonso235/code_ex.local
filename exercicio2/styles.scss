@@ -37,65 +37,58 @@ form {
         border-color: #0056b3;
     }
 }
-// Estilos para a lista principal (ul)
+// Acordeon -----------------------------------------------------------------------------------------------------------------------------------------------------------
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  // Estilos para os itens da lista (li)
+
   li {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     cursor: pointer;
   
-    // Estilos quando o mouse passa por cima
     &:hover {
       background-color: #f0f0f0;
     }
   
-    // Estilos para a lista aninhada (ul dentro de li)
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: none;
   
-      // Estilos para os itens da lista aninhada (li dentro de ul)
       li {
         padding: 10px;
         border-bottom: 1px solid #ddd;
         cursor: pointer;
   
-        // Estilos quando o mouse passa por cima
         &:hover {
-          background-color: #e0e0e0;
+          background-color: #888888;
         }
       }
     }
     
-    // Adicionar um ícone de seta para indicar o acordeão
     &::before {
-      content: "\25B6"; // Código Unicode para a seta direita
+      content: "\25B6"; // seta direita
       display: inline-block;
       margin-right: 10px;
     }
     
-    // Estilos para o acordeão aberto
     &.open {
       ul {
         display: block;
       }
   
       &::before {
-        content: "\25BC"; // Código Unicode para a seta para baixo
+        content: "\25BC"; // seta para baixo
       }
     }
   }
   
 
-// Estilos para os links de download
 a {
     text-decoration: none;
     color: #000000;

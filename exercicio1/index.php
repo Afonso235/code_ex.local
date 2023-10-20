@@ -13,7 +13,6 @@
             <h1>Códigos Aleatórios</h1>
 
             <?php
-            session_start();
             include "db.php";
             include "function.php";
 

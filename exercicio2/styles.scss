@@ -165,29 +165,3 @@ a {
   border: none;
   cursor: pointer;
 }
-
-:root {
-  --button-light-bg: #007bff;
-  --button-light-text: #fff;
-  --button-dark-bg: #333;
-  --button-dark-text: #fff;
-}
-
-.button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-
-  &.light {
-    background-color: var(--button-light-bg);
-    color: var(--button-light-text);
-  }
-
-  &.dark {
-    background-color: var(--button-dark-bg);
-    color: var(--button-dark-text);
-  }
-}

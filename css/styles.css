@@ -25,6 +25,7 @@
     background-repeat: no-repeat;
     background-position: center;
     transform: scale(1);
+    transition: 0.5s;
     z-index: 2; }
   .card .back {
     background-color: #fff;

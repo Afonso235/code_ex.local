@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .form {
   background-color: #f2f2f2;
   border: 1px solid #ccc;
@@ -33,50 +34,58 @@
     .form .submit-file:hover {
       background-color: #0062cc; }
 
-ul {
-  list-style: none;
+.accordion-container {
   padding: 0;
   margin: 0;
   background-color: #f5f5f5; }
 
-li {
+.accordion-item {
   padding: 10px 15px;
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer; }
-  li:hover {
+  .accordion-item:hover {
     background-color: #e0e0e0; }
-  li ul {
-    list-style: none;
+  .accordion-item .accordion-content {
     padding: 0;
     margin: 0;
     display: none;
+    width: auto;
     background-color: #e9e9e9; }
-    li ul li {
-      padding: 10px 15px;
-      border-bottom: 1px solid #d9d9d9;
-      cursor: pointer; }
-      li ul li:hover {
-        background-color: #d1d1d1; }
-  li::before {
-    content: "\25B6";
+  .accordion-item .accordion-button {
     display: inline-block;
-    margin-right: 10px;
-    color: #757575; }
-  li.open ul {
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    text-align: left;
+    font-size: x-large; }
+  .accordion-item:hover {
+    background-color: #e0e0e0; }
+  .accordion-item.open .accordion-content {
     display: block; }
-  li.open::after {
-    content: "\25BC"; }
+  .accordion-item.open .accordion-button::before {
+    content: "➖"; }
+
+.accordion-button::before {
+  content: "➕"; }
+
+.file-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #d9d9d9;
+  cursor: pointer; }
+  .file-item:hover {
+    background-color: #d1d1d1; }
 
 a {
   text-decoration: none;
   color: #000000;
-  font-size: 16px;
-  transition: color 0.3s; }
+  font-size: 20px;
+  transition: color 0.3s;
+  font-family: monospace; }
   a:hover {
     color: #0056b3; }
 
 .go-back {
-  margin-top: 50px; }
+  margin-block: 50px; }
 
 .delete-button {
   background-color: #ff0000;

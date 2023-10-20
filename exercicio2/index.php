@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Ficheiros</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <h2>Lista de Ficheiros</h2>
@@ -20,5 +18,7 @@
     <div class="go-back">
         <a href="formulario.php">Voltar para o Formulário</a>
     </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

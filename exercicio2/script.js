@@ -1,20 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var folders = document.querySelectorAll(".folder");
-    
-    folders.forEach(function (folder) {
-        folder.addEventListener("click", function (event) {
-            event.preventDefault();
-            console.log('ola');
-            let parent = folder.parentElement;
-            let sublist = parent.querySelector("ul");
-            
-            if (sublist.style.display === "flex") {
-                sublist.style.display = "none";
-            } else {
-                sublist.style.display = "flex";
-            }
-        });
-    });
+const accordionItems = document.querySelectorAll('.accordion-item');
+
+accordionItems.forEach(item => {
+  const button = item.querySelector('.accordion-button');
+  const content = item.querySelector('.accordion-content');
+  const targetId = button.dataset.target;
+
+  button.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
 });
-
-

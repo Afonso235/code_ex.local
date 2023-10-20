@@ -4,8 +4,6 @@ function exibirCodigo($connection) {
     $tempoAtual = time();
     $intervalo = 300; // 5 minutos em segundos
 
-    $exibirMensagem = false;
-
     // Verifica se é hora de gerar um novo código
     if (!isset($_SESSION['ultima_geracao']) || ($tempoAtual - $_SESSION['ultima_geracao']) >= $intervalo) {
         // Gera um código aleatório
@@ -13,15 +11,10 @@ function exibirCodigo($connection) {
 
         // Insere o código na base de dados
         if (inserirCodigoNaBD($connection, $codigo)) {
-            $exibirMensagem = true;
             $_SESSION['ultima_geracao'] = $tempoAtual;
         } else {
             echo "Erro ao inserir o código no banco de dados.<br>";
         }
-    }
-
-    if ($exibirMensagem) {
-        echo "Código gerado e inserido com sucesso: $codigo<br>";
     }
 }
 

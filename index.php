@@ -18,7 +18,6 @@
             include "function.php";
 
             exibirCodigo($connection);
-        
         ?> 
         </div> 
         <div>

@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Códigos Aleatórios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div>
-        <div style="float: left; width: 50%;">
+        <div class="code-list"">
             <h1>Códigos Aleatórios</h1>
 
             <?php
@@ -17,7 +21,7 @@
         
         ?> 
         </div> 
-        <div style="float: right; width: 50%;">
+        <div>
             <?php
         echo "<h2>Códigos Gerados</h2>";
         listarCodigos($connection);

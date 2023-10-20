@@ -1,12 +1,16 @@
 @charset "UTF-8";
+/* Color Variables */
+/* Use the lighten function to make it lighter */
+/* Accordion Styles */
 body {
-  background-color: #333;
-  color: #fff;
+  background-color: #f9f9f9;
+  color: #333;
   font-family: Arial, sans-serif;
   line-height: 1.6; }
 
+/* Form Styles  */
 .form {
-  background-color: #333;
+  background-color: #f9f9f9;
   border: 1px solid #ccc;
   padding: 20px;
   margin: 20px;
@@ -19,9 +23,9 @@ body {
     display: block;
     width: 98%;
     padding: 12px;
-    border: 1px solid #555;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #444;
+    background-color: #eee;
     font-size: 16px;
     transition: border-color 0.3s; }
     .form input[type="file"]:focus, .form input[type="file"]:hover {
@@ -38,59 +42,58 @@ body {
     font-size: 16px;
     transition: background-color 0.3s; }
     .form .submit-file:hover {
-      background-color: #0062cc; }
+      background-color: #3395ff; }
 
 .accordion-container {
   padding: 0;
   margin: 0;
-  background-color: #444; }
+  background-color: #eee; }
 
 .accordion-item {
   padding: 10px 15px;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid #ccc;
   cursor: pointer;
-  color: #fff; }
+  color: #333; }
   .accordion-item:hover {
-    background-color: #555; }
+    background-color: #ccc; }
   .accordion-item .accordion-content {
     padding: 0;
     margin: 0;
     display: none;
     width: auto;
-    background-color: #333; }
+    background-color: #f9f9f9; }
   .accordion-item .accordion-button {
     display: inline-block;
     width: 100%;
     border: none;
-    background-color: #444;
+    background-color: #eee;
     text-align: left;
     font-size: x-large;
-    color: #fff; }
+    color: #333; }
   .accordion-item:hover {
-    background-color: #555; }
+    background-color: #ccc; }
   .accordion-item.open .accordion-content {
     display: block; }
   .accordion-item.open .accordion-button::before {
     content: "➖"; }
-
-.accordion-button::before {
-  content: "➕"; }
+  .accordion-item .accordion-button::before {
+    content: "➕"; }
 
 .file-item {
   padding: 10px 15px;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #ccc;
   cursor: pointer; }
   .file-item:hover {
-    background-color: #444; }
+    background-color: #ccc; }
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #333;
   font-size: 20px;
   transition: color 0.3s;
   font-family: monospace; }
   a:hover {
-    color: #0056b3; }
+    color: #007bff; }
 
 .go-back {
   margin-block: 50px; }
@@ -103,18 +106,14 @@ a {
   border: none;
   cursor: pointer; }
 
-/* Button Style for Dark Mode */
-.btn-mode {
-  background-color: #007bff;
-  /* Blue color for dark mode */
-  color: #fff;
-  border: none;
+.btn.mode {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
   margin: 10px; }
-  .btn-mode:hover {
-    background-color: #0056b3;
-    /* Darker blue on hover for dark mode */ }
+  .btn.mode:hover {
+    background-color: #ccc; }

@@ -1,71 +1,71 @@
-// Color Variables
-$form-background: #333; 
+/* Color Variables */
+$form-background: #f9f9f9; 
 $form-border: #ccc;
 $form-shadow: rgba(0, 0, 0, 0.1);
-$input-background: #444; 
-$input-border: #555; 
+$input-background: #eee; 
+$input-border: #ccc; 
 $input-hover-border: #007bff; 
 $submit-background: #007bff;
-$submit-hover-background: darken($submit-background, 10%);
+$submit-hover-background: lighten($submit-background, 10%); /* Use the lighten function to make it lighter */
 $delete-background: #ff0000;
 $delete-color: #fff;
-// Accordion Styles
-$accordion-background: #444; 
-$accordion-border-color: #555; 
+/* Accordion Styles */
+$accordion-background: #eee; 
+$accordion-border-color: #ccc; 
 $accordion-arrow-color: #757575;
-$accordion-hover-background: #555; 
-$accordion-nested-background: #333; 
-$accordion-nested-border-color: #444; 
-$accordion-nested-hover-background: #444; 
+$accordion-hover-background: #ccc; 
+$accordion-nested-background: #f9f9f9; 
+$accordion-nested-border-color: #ccc; 
+$accordion-nested-hover-background: #ccc; 
 $accordion-margin: 0;
 $accordion-plus: "\02795";
 $accordion-minus: "\2796";
 
 body {
-  background-color: #333;
-  color: #fff;
+  background-color: #f9f9f9;
+  color: #333; 
   font-family: Arial, sans-serif; 
   line-height: 1.6; 
 }
-// Form Styles
+/* Form Styles  */
 .form {
-    background-color: $form-background;
-    border: 1px solid $form-border;
-    padding: 20px;
-    margin: 20px;
-    width: max-content;
-    padding-right: 35px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px $form-shadow;
-    input[type="file"] {
-        margin-top: 10px;
-        display: block;
-        width: 98%;
-        padding: 12px;
-        border: 1px solid $input-border;
-        border-radius: 5px;
-        background-color: $input-background;
-        font-size: 16px;
-        transition: border-color 0.3s;
-        &:focus, &:hover {
-            outline: none;
-            border-color: $input-hover-border;
-        }
+  background-color: $form-background;
+  border: 1px solid $form-border;
+  padding: 20px;
+  margin: 20px;
+  width: max-content;
+  padding-right: 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px $form-shadow;
+  input[type="file"] {
+    margin-top: 10px;
+    display: block;
+    width: 98%;
+    padding: 12px;
+    border: 1px solid $input-border;
+    border-radius: 5px;
+    background-color: $input-background;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    &:focus, &:hover {
+      outline: none;
+      border-color: $input-hover-border;
     }
-    .submit-file {
-        margin-top: 10px;
-        padding: 12px 20px;
-        background-color: $submit-background;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background-color 0.3s;
-        &:hover {
-            background-color: $submit-hover-background;
-        }
+  }
+  .submit-file {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background-color: $submit-background;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: $submit-hover-background;
     }
+  }
 }
 .accordion-container {
   padding: $accordion-margin;
@@ -76,7 +76,7 @@ body {
   padding: 10px 15px;
   border-bottom: 1px solid $accordion-border-color;
   cursor: pointer;
-  color: #fff;
+  color: #333;
   &:hover {
     background-color: $accordion-hover-background;
   }
@@ -94,7 +94,7 @@ body {
     background-color: $input-background;
     text-align: left;
     font-size: x-large;
-    color: #fff;
+    color: #333; 
   }
   &:hover {
     background-color: $accordion-hover-background;
@@ -107,9 +107,9 @@ body {
       content: $accordion-minus;
     }
   }
-}
-.accordion-button::before {
-  content: $accordion-plus;
+  .accordion-button::before {
+    content: $accordion-plus;
+  }
 }
 .file-item {
   padding: 10px 15px;
@@ -121,12 +121,12 @@ body {
 }
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #333; 
   font-size: 20px;
   transition: color 0.3s;
   font-family: monospace;
   &:hover {
-    color: #0056b3;
+    color: #007bff; 
   }
 }
 .go-back {
@@ -141,11 +141,9 @@ a {
   cursor: pointer;
 }
 
-/* Button Style for Dark Mode */
-.btn-mode {
-  background-color: #007bff; /* Blue color for dark mode */
-  color: #fff;
-  border: none;
+.btn.mode {
+  background-color: #f9f9f9; 
+  border: 1px solid #ccc;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
@@ -154,6 +152,6 @@ a {
   margin: 10px;
 
   &:hover {
-    background-color: #0056b3; /* Darker blue on hover for dark mode */
+    background-color: #ccc;
   }
 }

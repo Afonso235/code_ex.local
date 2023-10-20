@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicios de comida!</title>
+	<style>
+		code{
+			display: block;
+			width: 100%;
+			background: #d6bdbd4d;
+			margin-bottom: 8px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border-left: 4px solid #71886bab;
+			white-space: break-spaces;
+		}
+	</style>
+	<script src="script.js"></script>
+  </head>
+  <body>
+	<h1>Exercicios de comida!</h1>
+	<p>Usa este ficheiro HTML e com recurso a um ficheiro de Javascript externo, faz a seguinte tarefa:</p>
+	
+	<h2>Lista de tarefas</h2>
+	<p>Cria e inicializa função "init", que por cada nome que tenhas no teu array de nomes, vá buscar com o mesmo index o correspondente ao array dos teus pratos preferidos.</p>
+	<p>Para isso precisas criar uma função com parametro, por exemplo "getFood", em que passas por parametro o index da comida correspondente que pretendes ir buscar.</p>
+	<p>Por exemplo, o João é o primeiro item do teu array de nomes, e portanto vais chamar o getFood com o index 0 "getFood(0)", para obteres o prato preferido do João.</p>
+	
+	<code>
+		//Para te ajudar, podes obter o index desta maneira:
+		personNames.forEach(function (name, index){
+			console.log(name);
+			console.log(index);
+		});
+		
+	</code>
+	
+	<p>Por fim, depois de teres para cada nome o seu prato preferido, podes agora injectar um "li" com o texto "O João gosta de caril!!!" dentro do UL que existe nesta pagina HTML."</p>
+	<p>Para adicionares o LI ao UL deves criar a função "addLI" que recebe como parametro o nome e a comida preferida.</p>
+	
+	
+	<div class="preference-list">
+		<ul>
+			
+		</ul>
+	</div>
+	
+  </body>
+</html>

@@ -90,13 +90,15 @@ a {
   text-decoration: none;
   color: #333;
   font-size: 20px;
+  margin-left: 10px;
   transition: color 0.3s;
   font-family: monospace; }
   a:hover {
     color: #007bff; }
 
 .go-back {
-  margin-block: 50px; }
+  margin-top: 50px;
+  height: 45px; }
 
 .delete-button {
   background-color: #ff0000;
@@ -106,14 +108,15 @@ a {
   border: none;
   cursor: pointer; }
 
-.btn.mode {
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  padding: 10px 20px;
+.btn-mode {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
-  margin: 10px; }
-  .btn.mode:hover {
-    background-color: #ccc; }
+  margin-left: 41px; }
+  .btn-mode:hover {
+    background-color: #0056b3; }

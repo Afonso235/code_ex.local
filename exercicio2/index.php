@@ -14,8 +14,9 @@
     </div>
     <div class="go-back">
         <a href="formulario.php">Voltar para o Formulário</a>
+        <button class="btn-mode" onclick="toggleMode()">Bright Mode</button>
     </div>
-    <button class="btn-mode" onclick="toggleMode()">Alternar Modo</button>
+   
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>

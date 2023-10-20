@@ -15,6 +15,8 @@
         <input type="file" name="arquivo" id="arquivo">
         <input type="submit" value="Enviar Ficheiro" name="submit" class="submit-file">
     </form>
-    <button class="btn-mode" onclick="toggleMode()">Alternar Modo</button>
+    <div>
+        <button class="btn-mode" onclick="toggleMode()">Light Mode</button>
+    </div>
 </body>
 </html>

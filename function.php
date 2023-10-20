@@ -60,8 +60,10 @@ function listarCodigos($connection) {
             echo '<div class="back">';
             echo 'Código: ' . $row['codigo'] . '<br>';
             echo 'Data/Hora: ' . $row['timestamp'] . '<br>';
+            echo '<a href="excluir_card.php?codigo=' . $row['codigo'] . '">Excluir</a>';
             echo '</div>';
             echo '</div>';
+
         }
     } else {
         echo 'Nenhum código encontrado.';

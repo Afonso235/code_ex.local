@@ -51,3 +51,11 @@
     .card.flipped .back {
       z-index: 2;
       display: flex; }
+
+.code-random {
+  margin: 20px; }
+
+.list-cod {
+  margin: 20px; }
+  .list-cod .gera-code {
+    margin-left: 40px; }

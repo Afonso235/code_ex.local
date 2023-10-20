@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <div class="code-list"">
+        <div class="code-random"">
             <h1>Códigos Aleatórios</h1>
 
             <?php
@@ -20,9 +20,9 @@
             exibirCodigo($connection);
         ?> 
         </div> 
-        <div>
+        <div class="list-cod">
+        <h2 class="gera-code">Códigos Gerados</h2>
             <?php
-        echo "<h2>Códigos Gerados</h2>";
         listarCodigos($connection);
         ?>
         </div>

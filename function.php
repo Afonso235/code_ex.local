@@ -30,26 +30,18 @@ function gerarCodigoAleatorio() {
     $codigo = '';
     
     // Gerar 2 números
-    $codigo .= str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+    $codigo .= random_int(0, 9);
+    $codigo .= random_int(0, 9);
     
-    $codigo .= chr(rand(65, 90)); // Maiúscula
-    $codigo .= chr(rand(65, 90)); // Maiúscula
-    $codigo .= chr(rand(97, 122)); // Minúscula
+    $codigo .= chr(random_int(65, 90)); // Maiúscula
+    $codigo .= chr(random_int(65, 90)); // Maiúscula
+    $codigo .= chr(random_int(97, 122)); // Minúscula
     
     // Gerar 2 números
-    $codigo .= str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+    $codigo .= str_pad(random_int(0, 9), 2, '0', STR_PAD_LEFT);
     
     // Gerar 1 caracter especial (garantindo pelo menos um)
-    $codigo .= $caracteres[rand(0, strlen($caracteres) - 1)];
-
-    // Verificar se já existe um caractere especial no código
-    $temCaractereEspecial = strpos($codigo, $caracteres) !== false;
-
-    // Se não tem caractere especial, substitua um dos caracteres gerados aleatoriamente
-    if (!$temCaractereEspecial) {
-        $posicaoSubstituir = rand(0, strlen($codigo) - 1);
-        $codigo[$posicaoSubstituir] = $caracteres[rand(0, strlen($caracteres) - 1)];
-    }
+    $codigo .= $caracteres[random_int(0, strlen($caracteres) - 1)];
 
     return $codigo;
 }

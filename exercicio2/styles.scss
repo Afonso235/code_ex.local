@@ -141,9 +141,9 @@ a {
   cursor: pointer;
 }
 
-/* Button Style for Dark Mode */
+/* Button Style */
 .btn-mode {
-  background-color: #007bff; /* Blue color for dark mode */
+  background-color: #007bff; 
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -154,6 +154,6 @@ a {
   margin: 10px;
 
   &:hover {
-    background-color: #0056b3; /* Darker blue on hover for dark mode */
+    background-color: #0056b3; 
   }
 }

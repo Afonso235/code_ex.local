@@ -21,6 +21,11 @@ function listFiles($dir) {
             echo '<li><a href="download.php?file=' . $filePath . '">' . $fileInfo['filename'] . '.' . $fileInfo['extension'] . '</a>';
             echo ' (' . $fileSizeFormatted . ')';
             echo ' - ' . date('Y-m-d H:i:s', filemtime($filePath)) . '</li>';
+
+            echo '<form method="post" action="delete.php">';
+            echo '<input type="hidden" name="file" value="' . $filePath . '">';
+            echo '<input type="submit" class="delete-button" value="Excluir">';
+            echo '</form>';
         }
     }
 

@@ -7,11 +7,11 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <form action="upload.php" method="post" enctype="multipart/form-data">
+    <form action="upload.php" method="post" enctype="multipart/form-data" class="form">
         <h1>Formulário para Upload de Ficheiros</h1>
         Selecione um ficheiro:
         <input type="file" name="arquivo" id="arquivo">
-        <input type="submit" value="Enviar Ficheiro" name="submit">
+        <input type="submit" value="Enviar Ficheiro" name="submit" class="submit-file">
     </form>
 </body>
 </html>

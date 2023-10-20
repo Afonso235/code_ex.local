@@ -1,5 +1,5 @@
 // Estilos para o formulário
-form {
+.form {
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     padding: 20px;
@@ -19,7 +19,7 @@ form {
         font-size: 16px;
         transition: border-color 0.3s;
     }
-    input[type="submit"] {
+    .submit-file {
         margin-top: 10px;
         padding: 12px 20px;
         background-color: #007bff;
@@ -30,10 +30,10 @@ form {
         font-size: 16px;
         transition: background-color 0.3s;
     }
-    input[type="file"]:focus, input[type="submit"]:focus {
+    input[type="file"]:focus, .submit-file:focus {
         outline: none;
     }
-    input[type="file"]:hover, input[type="submit"]:hover {
+    input[type="file"]:hover, .submit-file:hover {
         border-color: #0056b3;
     }
 }
@@ -66,7 +66,7 @@ ul {
         cursor: pointer;
   
         &:hover {
-          background-color: #888888;
+          background-color: #b9b9b9;
         }
       }
     }
@@ -101,4 +101,12 @@ a {
 
 .go-back {
     margin-top: 50px;
+}
+
+.delete-button {
+  background-color: #ff0000; 
+  color: #fff; 
+  padding: 5px 10px;
+  border: none; 
+  cursor: pointer; 
 }

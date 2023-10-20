@@ -18,12 +18,10 @@ function listFiles($dir) {
             $fileInfo = pathinfo($filePath);
             $fileSize = filesize($filePath);
             $fileSizeFormatted = formatSize($fileSize);
-
             //donwload
             echo '<li><a href="download.php?file=' . $filePath . '">' . $fileInfo['filename'] . '.' . $fileInfo['extension'] . '</a>';
             echo ' (' . $fileSizeFormatted . ')';
             echo ' - ' . date('Y-m-d H:i:s', filemtime($filePath)) . '</li>';
-
             // excluir
             echo '<form method="post" action="delete.php">';
             echo '<input type="hidden" name="file" value="' . $filePath . '">';
@@ -31,7 +29,6 @@ function listFiles($dir) {
             echo '</form>';
         }
     }
-
     echo '</ul>';
 }
 

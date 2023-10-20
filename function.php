@@ -26,8 +26,11 @@ function exibirCodigo($connection) {
 }
 
 function gerarCodigoAleatorio() {
-    $caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#*%!"$&?«»ºª+~^-_';
+    $caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#*%!"$&?«»ºª+~^-_@£§|<>:;¨';
     $codigo = '';
+    
+    // Gerar 1 caracter especial (garantindo pelo menos um)
+    $codigo .= $caracteres[random_int(0, strlen($caracteres) - 1)];
     
     // Gerar 2 números
     $codigo .= random_int(0, 9);
@@ -39,9 +42,8 @@ function gerarCodigoAleatorio() {
     
     // Gerar 2 números
     $codigo .= str_pad(random_int(0, 9), 2, '0', STR_PAD_LEFT);
-    
-    // Gerar 1 caracter especial (garantindo pelo menos um)
-    $codigo .= $caracteres[random_int(0, strlen($caracteres) - 1)];
+
+    $codigo = str_shuffle($codigo);
 
     return $codigo;
 }

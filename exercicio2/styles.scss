@@ -4,13 +4,14 @@ form {
     border: 1px solid #ccc;
     padding: 20px;
     margin: 20px;
-    max-width: 400px;
+    width: max-content;
+    padding-right: 35px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     input[type="file"] {
         margin-top: 10px;
         display: block;
-        width: 100%;
+        width: 98%;
         padding: 12px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -36,34 +37,68 @@ form {
         border-color: #0056b3;
     }
 }
-
-// Estilos para o acordeão
+// Estilos para a lista principal (ul)
 ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
-    li {
-        margin: 5px;
-        .folder {
-            cursor: pointer;
-            color: #007bff;
-            font-size: 20px;
-            &:hover {
-                text-decoration: underline;
-                color: #0056b3;
-            }
-        }
-        ul ul {
-            list-style-type: circle;
-            margin-left: 20px;
-        }
+  }
+  
+  // Estilos para os itens da lista (li)
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  
+    // Estilos quando o mouse passa por cima
+    &:hover {
+      background-color: #f0f0f0;
     }
-}
+  
+    // Estilos para a lista aninhada (ul dentro de li)
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: none;
+  
+      // Estilos para os itens da lista aninhada (li dentro de ul)
+      li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        cursor: pointer;
+  
+        // Estilos quando o mouse passa por cima
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+    }
+    
+    // Adicionar um ícone de seta para indicar o acordeão
+    &::before {
+      content: "\25B6"; // Código Unicode para a seta direita
+      display: inline-block;
+      margin-right: 10px;
+    }
+    
+    // Estilos para o acordeão aberto
+    &.open {
+      ul {
+        display: block;
+      }
+  
+      &::before {
+        content: "\25BC"; // Código Unicode para a seta para baixo
+      }
+    }
+  }
+  
 
 // Estilos para os links de download
 a {
     text-decoration: none;
-    color: #007bff;
+    color: #000000;
     font-size: 16px;
     transition: color 0.3s;
     &:hover {

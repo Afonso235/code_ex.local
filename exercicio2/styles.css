@@ -3,13 +3,14 @@ form {
   border: 1px solid #ccc;
   padding: 20px;
   margin: 20px;
-  max-width: 400px;
+  width: max-content;
+  padding-right: 35px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
   form input[type="file"] {
     margin-top: 10px;
     display: block;
-    width: 100%;
+    width: 98%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -32,28 +33,44 @@ form {
     border-color: #0056b3; }
 
 ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0; }
-  ul li {
-    margin: 5px; }
-    ul li .folder {
-      cursor: pointer;
-      color: #007bff;
-      font-size: 20px; }
-      ul li .folder:hover {
-        text-decoration: underline;
-        color: #0056b3; }
-    ul li ul ul {
-      list-style-type: circle;
-      margin-left: 20px; }
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer; }
+  li:hover {
+    background-color: #f0f0f0; }
+  li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; }
+    li ul li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer; }
+      li ul li:hover {
+        background-color: #e0e0e0; }
+  li::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 10px; }
+  li.open ul {
+    display: block; }
+  li.open::before {
+    content: "\25BC"; }
 
 a {
   text-decoration: none;
-  color: #007bff;
+  color: #000000;
   font-size: 16px;
   transition: color 0.3s; }
   a:hover {
+    color: #0056b3; }
+  a::after {
     color: #0056b3; }
 
 .go-back {

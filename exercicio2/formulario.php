@@ -8,6 +8,7 @@
 </head>
 <body>
     <form action="upload.php" method="post" enctype="multipart/form-data">
+        <h1>Formulário para Upload de Ficheiros</h1>
         Selecione um ficheiro:
         <input type="file" name="arquivo" id="arquivo">
         <input type="submit" value="Enviar Ficheiro" name="submit">

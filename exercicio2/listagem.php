@@ -11,7 +11,7 @@ function listFiles($dir) {
         $filePath = $dir . '/' . $file;
 
         if (is_dir($filePath)) {
-            echo '<li class="accordion-list"><a href="#" class="folder">' . $file . '</a>';
+            echo '<li><a href="#" class="folder">' . $file . '</a>';
             listFiles($filePath);
             echo '</li>';
         } else {

@@ -10,14 +10,9 @@ $submit-hover-background: darken($submit-background, 10%);
 $delete-background: #ff0000;
 $delete-color: #fff;
 // Accordion Styles
-$accordion-background: #f5f5f5;
-$accordion-border-color: #e5e5e5;
-$accordion-arrow-color: #757575;
-$accordion-hover-background: #e0e0e0;
-$accordion-nested-background: #e9e9e9;
-$accordion-nested-border-color: #d9d9d9;
-$accordion-nested-hover-background: #d1d1d1;
 $accordion-margin: 0;
+$primary-color: #3498db;
+$accent-color: #e74c3c;
 
 // Form Styles
 .form {
@@ -64,78 +59,72 @@ $accordion-margin: 0;
     }
 }
 
-
-ul {
+// accordion
+ul.accordion {
   list-style: none;
-  padding: $accordion-margin;
-  margin: $accordion-margin;
-  background-color: $accordion-background;
+  padding-left: 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+li.accordion-list {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+a.folder {
+  text-decoration: none;
+  color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  &::after {
+    content: '\25BC';
+    margin-left: 10px;
+  }
+}
+
+a.folder.open::after {
+  content: '\25B2'; 
 }
 
 li {
-  padding: 10px 15px;
-  border-bottom: 1px solid $accordion-border-color;
-  cursor: pointer;
+  display: none;
+}
 
-  &:hover {
-    background-color: $accordion-hover-background;
-  }
-
-  ul {
-    list-style: none;
-    padding: $accordion-margin;
-    margin: $accordion-margin;
-    display: none;
-    background-color: $accordion-nested-background;
-
-    li {
-      padding: 10px 15px;
-      border-bottom: 1px solid $accordion-nested-border-color;
-      cursor: pointer;
-
-      &:hover {
-        background-color: $accordion-nested-hover-background;
-      }
-    }
-  }
-
-  &::before {
-    content: "\25B6"; // Right arrow
-    display: inline-block;
-    margin-right: 10px;
-    color: $accordion-arrow-color;
-  }
-
-  &.open {
-    ul {
-      display: block;
-    }
-
-    &::after {
-      content: "\25BC"; // Down arrow
-    }
+ul.accordion.open {
+  li {
+    display: list-item; 
   }
 }
 
-a {
-    text-decoration: none;
-    color: #000000;
-    font-size: 16px;
-    transition: color 0.3s;
-    &:hover {
-        color: #0056b3;
-    }
+.delete-button {
+  background-color: $accent-color;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+  }
 }
 
 .go-back {
   margin-top: 50px;
-}
-
-.delete-button {
-  background-color: $delete-background;
-  color: $delete-color;
-  margin: 10px;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
 }

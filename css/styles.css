@@ -19,7 +19,8 @@
     justify-content: center;
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    background-color: #476944; }
   .card .front {
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,7 +29,6 @@
     transition: 0.5s;
     z-index: 2; }
   .card .back {
-    background-color: #fff;
     transform: rotateY(180deg);
     display: none;
     flex-direction: column;

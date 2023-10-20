@@ -17,19 +17,15 @@ function exibirCodigo($connection) {
 
 function gerarCodigoAleatorio() {
     $caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789#*%!"$&?«»ºª+~^-_@£§|<>:;¨';
+    
     $codigo = '';
-    
     $codigo .= $caracteres[random_int(0, strlen($caracteres) - 1)];
-    
     $codigo .= random_int(0, 9);
     $codigo .= random_int(0, 9);
-    
     $codigo .= chr(random_int(65, 90)); 
     $codigo .= chr(random_int(65, 90)); 
-    $codigo .= chr(random_int(97, 122)); 
-    
+    $codigo .= chr(random_int(97, 122));
     $codigo .= str_pad(random_int(0, 9), 2, '0', STR_PAD_LEFT);
-
     $codigo = str_shuffle($codigo);
 
     return $codigo;

@@ -9,7 +9,6 @@ $submit-background: #007bff;
 $submit-hover-background: darken($submit-background, 10%);
 $delete-background: #ff0000;
 $delete-color: #fff;
-
 // Accordion Styles
 $accordion-background: #444; 
 $accordion-border-color: #555; 
@@ -22,15 +21,12 @@ $accordion-margin: 0;
 $accordion-plus: "\02795";
 $accordion-minus: "\2796";
 
-
-
 body {
   background-color: #333;
   color: #fff;
   font-family: Arial, sans-serif; 
   line-height: 1.6; 
 }
-
 // Form Styles
 .form {
     background-color: $form-background;
@@ -41,7 +37,6 @@ body {
     padding-right: 35px;
     border-radius: 10px;
     box-shadow: 0 4px 6px $form-shadow;
-
     input[type="file"] {
         margin-top: 10px;
         display: block;
@@ -52,13 +47,11 @@ body {
         background-color: $input-background;
         font-size: 16px;
         transition: border-color 0.3s;
-
         &:focus, &:hover {
             outline: none;
             border-color: $input-hover-border;
         }
     }
-
     .submit-file {
         margin-top: 10px;
         padding: 12px 20px;
@@ -69,30 +62,24 @@ body {
         cursor: pointer;
         font-size: 16px;
         transition: background-color 0.3s;
-
         &:hover {
             background-color: $submit-hover-background;
         }
     }
 }
-
-
 .accordion-container {
   padding: $accordion-margin;
   margin: $accordion-margin;
   background-color: $accordion-background;
 }
-
 .accordion-item {
   padding: 10px 15px;
   border-bottom: 1px solid $accordion-border-color;
   cursor: pointer;
   color: #fff;
-
   &:hover {
     background-color: $accordion-hover-background;
   }
-
   .accordion-content {
     padding: $accordion-margin;
     margin: $accordion-margin;
@@ -100,7 +87,6 @@ body {
     width: auto;
     background-color: $accordion-nested-background;
   }
-
   .accordion-button {
     display: inline-block;
     width: 100%;
@@ -110,53 +96,42 @@ body {
     font-size: x-large;
     color: #fff;
   }
-
   &:hover {
     background-color: $accordion-hover-background;
   }
-
   &.open {
     .accordion-content {
       display: block;
     }
-
     .accordion-button::before {
       content: $accordion-minus;
     }
   }
 }
-
 .accordion-button::before {
   content: $accordion-plus;
 }
-
 .file-item {
   padding: 10px 15px;
   border-bottom: 1px solid $accordion-nested-border-color;
   cursor: pointer;
-
   &:hover {
     background-color: $accordion-nested-hover-background;
   }
 }
-
 a {
   text-decoration: none;
   color: #ffffff;
   font-size: 20px;
   transition: color 0.3s;
   font-family: monospace;
-
   &:hover {
     color: #0056b3;
   }
 }
-
-
 .go-back {
   margin-block: 50px;
 }
-
 .delete-button {
   background-color: $delete-background;
   color: $delete-color;

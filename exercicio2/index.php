@@ -9,11 +9,8 @@
 </head>
 <body>
     <h2>Lista de Ficheiros</h2>
-
     <div class="file-list">
-    <?php
-    listFiles($currentDir);
-    ?>
+        <?php listFiles($currentDir); ?>
     </div>
     <div class="go-back">
         <a href="formulario.php">Voltar para o Formulário</a>

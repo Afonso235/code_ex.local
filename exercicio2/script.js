@@ -8,10 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
             let parent = folder.parentElement;
             let sublist = parent.querySelector("ul");
             
-            if (sublist.style.display === "block") {
+            if (sublist.style.display === "flex") {
                 sublist.style.display = "none";
             } else {
-                sublist.style.display = "block";
+                sublist.style.display = "flex";
             }
         });
     });
